@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+<title>Lani Nash</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body,h1,h2,h3,h4,h5,h6 {font-family: "Garamond", sans-serif}
+.w3-row-padding img {margin-bottom: 12px}
+.bgimg {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url('photo.jpg');
+  min-height: 100%;
+}
+.mySlides {display:none;}
+p.small{line-height:0.7;}
+.centered {
+ position: absolute;
+ top: 50%;
+ left: 50%;
+ transform: translate(-50%, -50%);
+}
+</style>
+<body>
+
+<!-- Sidebar with image -->
+<nav class="w3-sidebar w3-hide-medium w3-hide-small" style="width:40%">
+  <div class="bgimg"></div>
+</nav>
+
+<!-- Hidden Sidebar (reveals when clicked on menu icon)-->
+<nav class="w3-sidebar w3-indigo w3-animate-right w3-xxlarge" style="display:none;padding-top:150px;right:0;z-index:2" id="mySidebar">
+  <a href="javascript:void(0)" onclick="closeNav()" class="w3-button w3-black w3-xxxlarge w3-display-topright" style="padding:0 12px;">
+    <i class="fa fa-remove"></i>
+  </a>
+  <div class="w3-bar-block w3-center">
+	  <a href="#" class="w3-bar-item w3-button w3-text-grey w3-hover-black" onclick="closeNav()"><font color="orange">Home</font></a>
+	  <a href="#about" class="w3-bar-item w3-button w3-text-grey w3-hover-black" onclick="closeNav()"><font color ="orange">About</font></a>
+	  <a href="#portfolio" class="w3-bar-item w3-button w3-text-grey w3-hover-black" onclick="closeNav()"><font color ="orange">Latest Projects</font></a>
+	  <a href="#contact" class="w3-bar-item w3-button w3-text-grey w3-hover-black" onclick="closeNav()"><font color ="orange">Contact</font></a>
+  </div>
+</nav>
+
+<!-- Page Content -->
+<div class="w3-main w3-padding-large" style="margin-left:40%">
+ <img class="mySlides" src="3.jpg" style="width:120%">
+ <div class ="centered" style ="color:white"><h1>Lani Nash</h1></div>
+  <img class="mySlides" src="4.jpg" style="width:120%">
+  <img class="mySlides" src="5.jpg" style="width:120%">
+<img class="mySlides" src="6.jpg" style="width:120%">
+<img class="mySlides" src="7.jpg" style="width:120%">
+  <!-- Menu icon to open sidebar -->
+  <span class="w3-button w3-top w3-white w3-xxlarge w3-text-grey w3-hover-text-black" style="width:auto;right:0;" onclick="openNav()"><i class="fa fa-bars"></i></span>
+  <!-- Header -->
+  <header class="w3-container w3-center w3-animate-zoom" style="padding:118px 13px" id="home">
+	  <h1 class="w3-jumbo"><b><p class="small"><font face ="cursive">Lani Nash</font></b></p></h1>
+    <p>Nashville singer/songwriter</p>
+  </header>
+  
+  <!-- About Section -->
+  <div class="w3-content w3-justify w3-text-grey w3-padding-32" id="about">
+    <h2>About</h2>
+    <hr class="w3-opacity">
+    <p>Nashville singer/songwriter Lani Nash can best be summed up best by a fan who says: "In a matter of two hours at The Bluebird Cafe in Nashville, TN, Lani Nash made me laugh, and cry, and feel things I thought I had forgotten how to feel; It's as if she softly stole my heart right out of my chest, fine tuned every string, and gently placed it back, much lighter and more vibrant than I can ever recall it being. She is witty, intelligent, and kind, and she writes straight from her heart to yours. "For over 20 years, Nash has consistently written and performed throughout the world with such passion and conviction, one cannot help but be moved in her presence. Her 5th, self produced, record is due to be released early Spring of 2019.
+    </p>
+    <p>Nashville Americans singer-songwriter Lani Nash has toured through-out the USA and Canada from NYC to Los Angeles, and Montreal to VanCouver. Opening for such acts as Mary Chapin-Carpenter, Brian White, Sons of the Desert, Jerry Jeff Walker, Riders in the Sky, and many more. Lani's grandfather Connie "Conway" Crunk, a noted musician, music teacher, singer-songwriter, and producer worked closely with producer Lee Hazelwood who produced Wayne Newton and wrote "These Boots are Made for Walkin"(Nancy Sinatra), was a great inspiration to her.</p>
+    <p>Lani's live performances include venues such as The Bluebird Cafe, 3rd and Lidsley, Douglas Corner, Bluebird on the Mount, Pensacola songwriter festival, Vermont's Maritime Festival, Legendary Dobbs in Philly, The Bitter End, Bowery Electric, The Living Room, The Blue Door, VZD's, Oklahoma Civic Center, The Paramount Theatre, Luna Star Cafe and The Duncan Showroom</p>
+   
+   <!-- Portfolio Section -->
+  <div class="w3-padding-32 w3-content" id="portfolio">
+    <h2 class="w3-text-grey">Latest Projects</h2>
+    <hr class="w3-opacity">
+
+    <!-- Grid for photos -->
+    <div class="w3-row-padding" style="margin:0 -16px">
+      <div class="w3-half">
+        <iframe width="420" height="315" src="https://www.youtube.com/embed/sgnqn0HUs0k" style="width:100%"></iframe>
+        <iframe width="420" height="315" src="https://www.youtube.com/embed/ecH4tF-sOdI" style="width:100%"></iframe>
+      </div>
+
+      <div class="w3-half">
+      <iframe width="420" height="315" src="https://www.youtube.com/embed/NdNLOoZZ8-g" style="width:100%"></iframe>
+       <iframe width="420" height="315" src="https://www.youtube.com/embed/_QIEv_5RJyc" style="width:100%"></iframe>
+      </div>
+    <!-- End photo grid -->
+    </div>
+  <!-- End Portfolio Section -->
+  </div>
+ 
+    <!-- Testimonials -->
+    <h3 class="w3-padding-24">Testimonials</h3>
+    <p><span class="w3-large w3-text-black w3-margin-right">Stephen Brown.</span> Bose Professional Systems</p>
+    <p><blockquote><q>Lani is such a talent and her music is truly moving...</q></blockquote></p><br>
+   
+    <p><span class="w3-large w3-text-black w3-margin-right">Michael Silverstone.</span> Travelling Yellow Sofa, Northampton, MA.</p>
+    <p><blockquote><q>Lani Nash's always honest delivery and thought provoking, and often entertainingly dever something of both ballads and up tempo folk repertoire has an appeal that cuts across genres. The combination of her songwriting and her ability to convey emotion make for electriying performance.</blockquote></q><br></p>
+    
+    <p><span class="w3-large w3-text-black w3-margin-right">Oklahoma City Events</span> </p>
+    <p><blockquote><q>Every now and then the cornucopia of singer/songwriters that is Nashville delivers something both substantive and tasty. From the current crop of Nashville musicians comes Lani Nash, who delivers shades of Mary Chapin Carpenter, Patti Griffin and Reba McEntire, in a style that is uniquely hers...</blockquote><br></q></p>
+    <p><span class="w3-large w3-text-black w3-margin-right">GotFolk.com</span> </p>
+    <p><blockquote><q>[She has] the heart and soul of Lucinda Williams (think 'Car Wheels on a Gravel Road'), and the timbre and phrasing of Jennifer Nettles (think Sugarland's 'Stay')'.</q></blockquote><br></p>
+    
+    <p><span class="w3-large w3-text-black w3-margin-right">Amazon Review</span> </p>
+    <p><blockquote><q>Really, independent artists don't get much better than this. And Ms. Nash doesn't need to;she's perfect the way she is.</q></blockquote><br></p>
+    
+  <!-- End About Section -->
+  </div>
+
+  <!-- Contact Section -->
+  <div class="w3-content w3-text-grey" id="contact" style="margin-bottom:64px">
+    <h2>Contact Me</h2> 
+    <img src="0005.jpg" class="w3-image w3-greyscale" style="width:100%;margin:32px 0">
+   
+    <p>Lets get in touch. Send me a message:</p>
+    <form action="/action_page.php" target="_blank">
+      <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Name" required name="Name"></p>
+      <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Email" required name="Email"></p>
+      <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Subject" required name="Subject"></p>
+      <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Message" required name="Message"></p>
+      <p>
+        <button class="w3-button w3-light-grey w3-padding-large" type="submit">
+          <i class="fa fa-paper-plane"></i> SEND MESSAGE
+        </button>
+      </p>
+    </form>
+  
+  <!-- End Contact Section -->
+  </div>  
+  
+  <!-- Footer -->
+<iframe src="https://calendar.google.com/calendar/embed?height=600&amp;wkst=1&amp;bgcolor=%23ffffff&amp;ctz=America%2FDenver&amp;src=cmprdW1hcjA1MDlAZ21haWwuY29t&amp;src=YWRkcmVzc2Jvb2sjY29udGFjdHNAZ3JvdXAudi5jYWxlbmRhci5nb29nbGUuY29t&amp;src=dWpvZnFwZmZuNWpiYjVkNWs1MDJra2g0aGNAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&amp;src=ZW4udXNhI2hvbGlkYXlAZ3JvdXAudi5jYWxlbmRhci5nb29nbGUuY29t&amp;color=%23039BE5&amp;color=%2333B679&amp;color=%23616161&amp;color=%230B8043" style="border-width:0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
+  
+<!-- END PAGE CONTENT -->
+</div>
+
+<script>
+// Open and close sidebar
+function openNav() {
+  document.getElementById("mySidebar").style.width = "60%";
+  document.getElementById("mySidebar").style.display = "block";
+}
+
+function closeNav() {
+  document.getElementById("mySidebar").style.display = "none";
+}
+</script>
+<script>
+var myIndex = 0;
+carousel();
+
+function carousel() {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+  }
+  myIndex++;
+  if (myIndex > x.length) {myIndex = 1}    
+  x[myIndex-1].style.display = "block";  
+  setTimeout(carousel, 2000); // Change image every 2 seconds
+}
+</script>
+
+
+</body>
+</html>
