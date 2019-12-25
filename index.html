@@ -132,7 +132,19 @@ p.small{line-height:0.7;}
   </div>
   <div class="w3-content w3-justify w3-text-grey w3-padding-32" id="scheduled">
   <h2>Scheduled Performances</h2>
-<button onclick="readTextFile("test.txt")">The time is?</button>
+
+<script> 
+// Requiring fs module in which  
+// readFile function is defined. 
+const fs = require('fs') 
+  
+fs.readFile('test.txt', (err, data) => { 
+    if (err) throw err; 
+  
+    console.log(data.toString()); 
+}) 
+</script> 
+
 </div>  
   <!-- Footer -->
 <!-- END PAGE CONTENT -->
