@@ -134,13 +134,9 @@ p.small{line-height:0.7;}
   <h2>Scheduled Performances</h2>
  
  <script>
- Promise.all([
-  fetch('sample.txt').then(x => x.text()),
-  fetch('sample2.txt').then(x => x.text())
-]).then(([sampleResp, sample2Resp]) => {
-  console.log(sampleResp);
-  console.log(sample2Resp);
-});
+  async function getSampleText() {
+  console.log( (await fetch('test.txt')).text() );
+}
 </script>
 </div>  
   <!-- Footer -->
