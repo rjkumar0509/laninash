@@ -132,19 +132,16 @@ p.small{line-height:0.7;}
   </div>
   <div class="w3-content w3-justify w3-text-grey w3-padding-32" id="scheduled">
   <h2>Scheduled Performances</h2>
-
-<script> 
-// Requiring fs module in which  
-// readFile function is defined. 
-const fs = require('fs') 
-  
-fs.readFile('test.txt', (err, data) => { 
-    if (err) throw err; 
-  
-    console.log(data.toString()); 
-}) 
-</script> 
-
+ 
+ <script>
+ Promise.all([
+  fetch('sample.txt').then(x => x.text()),
+  fetch('sample2.txt').then(x => x.text())
+]).then(([sampleResp, sample2Resp]) => {
+  console.log(sampleResp);
+  console.log(sample2Resp);
+});
+</script>
 </div>  
   <!-- Footer -->
 <!-- END PAGE CONTENT -->
@@ -176,25 +173,6 @@ function carousel() {
   x[myIndex-1].style.display = "block";  
   setTimeout(carousel, 2000); // Change image every 2 seconds
 }
-</script>
-<script type="text/javascript">
-function readTextFile(file) {
-    var rawFile = new XMLHttpRequest(); // XMLHttpRequest (often abbreviated as XHR) is a browser object accessible in JavaScript that provides data in XML, JSON, but also HTML format, or even a simple text using HTTP requests.
-    rawFile.open("GET", file, false); // open with method GET the file with the link file ,  false (synchronous)
-    rawFile.onreadystatechange = function ()
-    {
-        if(rawFile.readyState === 4) // readyState = 4: request finished and response is ready
-        {
-            if(rawFile.status === 200) // status 200: "OK"
-            {
-                var allText = rawFile.responseText; //  Returns the response data as a string
-                console.log(allText); // display text on the console
-            }
-        }
-    }
-    rawFile.send(null); //Sends the request to the server Used for GET requests with param null
-}
-
 </script>
 
 </body>
