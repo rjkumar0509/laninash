@@ -132,11 +132,10 @@ p.small{line-height:0.7;}
   </div>
   <div class="w3-content w3-justify w3-text-grey w3-padding-32" id="scheduled">
   <h2>Scheduled Performances</h2>
- <button type="button"
-onclick="getSampleText()">
-<p id="scheduled"></p>
-
-Click me to display Date and Time.</button>
+<div>
+  <button id="request_button">Request File</button>
+</div>
+<div id="response_div"></div>
 
 </div>  
   <!-- Footer -->
@@ -170,9 +169,27 @@ function carousel() {
   setTimeout(carousel, 2000); // Change image every 2 seconds
 }
 </script>
- <script>
-  async function getSampleText() {
-  console.log( (await fetch('test.txt')).text() );
+<script type="application/javascript">
+var request_button = document.getElementById("request_button");
+var filename = "example-txt-file.txt";
+
+request_button.addEventListener('click', function(evt) {
+  request_file(filename);
+});
+
+function request_file(filename) {
+  var request_obj = new XMLHttpRequest();
+  request_obj.responseType = 'text';
+  request_obj.open("GET", filename);
+  request_obj.send();
+  request_obj.onload = function () {
+    display_response(request_obj.responseText);
+  };
+}
+
+function display_response(content) {
+  var response_div = document.getElementById("response_div");
+  response_div.textContent = content;
 }
 </script>
 
