@@ -26,24 +26,23 @@ p.small{line-height:0.7;}
 }
 </style>
  <script type="text/javascript">
+function readTextFile(file) {
+    var rawFile = new XMLHttpRequest(); // XMLHttpRequest (often abbreviated as XHR) is a browser object accessible in JavaScript that provides data in XML, JSON, but also HTML format, or even a simple text using HTTP requests.
+    rawFile.open("GET", file, false); // open with method GET the file with the link file ,  false (synchronous)
+    rawFile.onreadystatechange = function ()
+    {
+        if(rawFile.readyState === 4) // readyState = 4: request finished and response is ready
+        {
+            if(rawFile.status === 200) // status 200: "OK"
+            {
+                var allText = rawFile.responseText; //  Returns the response data as a string
+                console.log(allText); // display text on the console
+            }
+        }
+    }
+    rawFile.send(null); //Sends the request to the server Used for GET requests with param null
+}
 
-	var reader = new FileReader();
-
-	function readText(that){
-
-		if(that.files && that.files[0]){
-			var reader = new FileReader();
-			reader.onload = function (e) {  
-				var output=e.target.result;
-
-				//process text to show only lines with "@":				
-				output=output.split("\n").filter(/./.test, /\@/).join("\n");
-
-				document.getElementById('main').innerHTML= output;
-			};//end onload()
-			reader.readAsText(that.files[0]);
-		}//end if html5 filelist support
-	} 
 </script>
 <body>
 
@@ -62,6 +61,7 @@ p.small{line-height:0.7;}
 	  <a href="#about" class="w3-bar-item w3-button w3-text-grey w3-hover-black" onclick="closeNav()"><font color ="orange">About</font></a>
 	  <a href="#portfolio" class="w3-bar-item w3-button w3-text-grey w3-hover-black" onclick="closeNav()"><font color ="orange">Latest Projects</font></a>
 	  <a href="#contact" class="w3-bar-item w3-button w3-text-grey w3-hover-black" onclick="closeNav()"><font color ="orange">Contact</font></a>
+	  <a href="#Scheduled Performances" class="w3-bar-item w3-button w3-text-grey w3-hover-black" onclick="readTextFile("text.txt")"><font color ="orange">Scheduled Performances</font></a>
   </div>
 </nav>
 
